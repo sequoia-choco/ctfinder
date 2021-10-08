@@ -73,7 +73,7 @@ white-space: nowrap;
   <% @participants.each do |p| %>
     <div class="col-4">
     <div class="card si">
-    <p class="d-block text-gray-dark mozi3"><%= link_to p.name, user_path(p.user),:style=>"text-decoration:none;color:black;" %></p>
+    <p class="d-block text-gray-dark mozi3"><%= link_to p.name, user_path(p.user),:style=>"text-decoration:none;color:black;", data: {"turbolinks" => false} %></p>
     <% if p.user.image.attached? %>
             <%= image_tag p.user.image, class: "aligncenter" %>
           <% else %>
