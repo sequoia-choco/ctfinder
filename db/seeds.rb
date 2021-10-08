@@ -14,7 +14,7 @@ require 'securerandom'
 #     user = User.create(
 #         name: SecureRandom.alphanumeric(rand(3..10)), 
 #         email: SecureRandom.alphanumeric(rand(10..20)) + "@gmail.com", 
-#         password: "tintin#{n}", 
+#         password: "tintin1", 
 #         web: rand(1..5),
 #         crypto: rand(1..5),
 #         reversing: rand(1..5),
@@ -30,7 +30,7 @@ require 'securerandom'
 user = User.create(
             name: "John", 
             email: SecureRandom.alphanumeric(rand(10..20)) + "@gmail.com", 
-            password: "tintin#{n}", 
+            password: "tintin1", 
             web: rand(1..5),
             crypto: rand(1..5),
             reversing: rand(1..5),
@@ -45,7 +45,7 @@ user = User.create(
 user = User.create(
             name: "Tom", 
             email: SecureRandom.alphanumeric(rand(10..20)) + "@gmail.com", 
-            password: "tintin#{n}", 
+            password: "tintin1", 
             web: rand(1..5),
             crypto: rand(1..5),
             reversing: rand(1..5),
@@ -60,7 +60,7 @@ user = User.create(
 user = User.create(
             name: "Alice", 
             email: SecureRandom.alphanumeric(rand(10..20)) + "@gmail.com", 
-            password: "tintin#{n}", 
+            password: "tintin1", 
             web: rand(1..5),
             crypto: rand(1..5),
             reversing: rand(1..5),
@@ -75,7 +75,7 @@ user = User.create(
 user = User.create(
             name: "Josh", 
             email: SecureRandom.alphanumeric(rand(10..20)) + "@gmail.com", 
-            password: "tintin#{n}", 
+            password: "tintin1", 
             web: rand(1..5),
             crypto: rand(1..5),
             reversing: rand(1..5),
@@ -90,7 +90,7 @@ user = User.create(
 user = User.create(
             name: "Kane", 
             email: SecureRandom.alphanumeric(rand(10..20)) + "@gmail.com", 
-            password: "tintin#{n}", 
+            password: "tintin1", 
             web: rand(1..5),
             crypto: rand(1..5),
             reversing: rand(1..5),
@@ -105,7 +105,7 @@ user = User.create(
 user = User.create(
             name: "Son", 
             email: SecureRandom.alphanumeric(rand(10..20)) + "@gmail.com", 
-            password: "tintin#{n}", 
+            password: "tintin1", 
             web: rand(1..5),
             crypto: rand(1..5),
             reversing: rand(1..5),
@@ -120,7 +120,7 @@ user = User.create(
 user = User.create(
             name: "James", 
             email: SecureRandom.alphanumeric(rand(10..20)) + "@gmail.com", 
-            password: "tintin#{n}", 
+            password: "tintin1", 
             web: rand(1..5),
             crypto: rand(1..5),
             reversing: rand(1..5),
@@ -135,7 +135,7 @@ user = User.create(
 user = User.create(
             name: "Bob", 
             email: SecureRandom.alphanumeric(rand(10..20)) + "@gmail.com", 
-            password: "tintin#{n}", 
+            password: "tintin1", 
             web: rand(1..5),
             crypto: rand(1..5),
             reversing: rand(1..5),
@@ -151,7 +151,7 @@ user = User.create(
     user = User.create(
             name: "bill", 
             email: SecureRandom.alphanumeric(rand(10..20)) + "@gmail.com", 
-            password: "tintin#{n}", 
+            password: "tintin1", 
             web: rand(1..5),
             crypto: rand(1..5),
             reversing: rand(1..5),
