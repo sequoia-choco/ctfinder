@@ -27,15 +27,176 @@ require 'securerandom'
 #         filename: 'default_user.png'
 #     )
 # end
+user = User.create(
+            name: "John", 
+            email: SecureRandom.alphanumeric(rand(10..20)) + "@gmail.com", 
+            password: "tintin#{n}", 
+            web: rand(1..5),
+            crypto: rand(1..5),
+            reversing: rand(1..5),
+            pwn: rand(1..5),
+            misc: rand(1..5),
+            self_introduction: "I'm a beginner"
+        )
+        user.image.attach(
+            io: File.open(Rails.root.join("public/user#{rand(0..9)}.png")),
+            filename: 'default_user.png'
+        )
+user = User.create(
+            name: "Tom", 
+            email: SecureRandom.alphanumeric(rand(10..20)) + "@gmail.com", 
+            password: "tintin#{n}", 
+            web: rand(1..5),
+            crypto: rand(1..5),
+            reversing: rand(1..5),
+            pwn: rand(1..5),
+            misc: rand(1..5),
+            self_introduction: "looking for pwn player"
+        )
+        user.image.attach(
+            io: File.open(Rails.root.join("public/user#{rand(0..9)}.png")),
+            filename: 'default_user.png'
+        )
+user = User.create(
+            name: "Alice", 
+            email: SecureRandom.alphanumeric(rand(10..20)) + "@gmail.com", 
+            password: "tintin#{n}", 
+            web: rand(1..5),
+            crypto: rand(1..5),
+            reversing: rand(1..5),
+            pwn: rand(1..5),
+            misc: rand(1..5),
+            self_introduction: "Let's have fun!"
+        )
+        user.image.attach(
+            io: File.open(Rails.root.join("public/user#{rand(0..9)}.png")),
+            filename: 'default_user.png'
+        )
+user = User.create(
+            name: "Josh", 
+            email: SecureRandom.alphanumeric(rand(10..20)) + "@gmail.com", 
+            password: "tintin#{n}", 
+            web: rand(1..5),
+            crypto: rand(1..5),
+            reversing: rand(1..5),
+            pwn: rand(1..5),
+            misc: rand(1..5),
+            self_introduction: "I'm good at crypto"
+        )
+        user.image.attach(
+            io: File.open(Rails.root.join("public/user#{rand(0..9)}.png")),
+            filename: 'default_user.png'
+        )
+user = User.create(
+            name: "Kane", 
+            email: SecureRandom.alphanumeric(rand(10..20)) + "@gmail.com", 
+            password: "tintin#{n}", 
+            web: rand(1..5),
+            crypto: rand(1..5),
+            reversing: rand(1..5),
+            pwn: rand(1..5),
+            misc: rand(1..5),
+            self_introduction: "Thank you!"
+        )
+        user.image.attach(
+            io: File.open(Rails.root.join("public/user#{rand(0..9)}.png")),
+            filename: 'default_user.png'
+        )
+user = User.create(
+            name: "Son", 
+            email: SecureRandom.alphanumeric(rand(10..20)) + "@gmail.com", 
+            password: "tintin#{n}", 
+            web: rand(1..5),
+            crypto: rand(1..5),
+            reversing: rand(1..5),
+            pwn: rand(1..5),
+            misc: rand(1..5),
+            self_introduction: "from Asia!"
+        )
+        user.image.attach(
+            io: File.open(Rails.root.join("public/user#{rand(0..9)}.png")),
+            filename: 'default_user.png'
+        )
+user = User.create(
+            name: "James", 
+            email: SecureRandom.alphanumeric(rand(10..20)) + "@gmail.com", 
+            password: "tintin#{n}", 
+            web: rand(1..5),
+            crypto: rand(1..5),
+            reversing: rand(1..5),
+            pwn: rand(1..5),
+            misc: rand(1..5),
+            self_introduction: "want to become No.1"
+        )
+        user.image.attach(
+            io: File.open(Rails.root.join("public/user#{rand(0..9)}.png")),
+            filename: 'default_user.png'
+        )
+user = User.create(
+            name: "Bob", 
+            email: SecureRandom.alphanumeric(rand(10..20)) + "@gmail.com", 
+            password: "tintin#{n}", 
+            web: rand(1..5),
+            crypto: rand(1..5),
+            reversing: rand(1..5),
+            pwn: rand(1..5),
+            misc: rand(1..5),
+            self_introduction: "can you help me?"
+        )
+        user.image.attach(
+            io: File.open(Rails.root.join("public/user#{rand(0..9)}.png")),
+            filename: 'default_user.png'
+        )
 
+    user = User.create(
+            name: "bill", 
+            email: SecureRandom.alphanumeric(rand(10..20)) + "@gmail.com", 
+            password: "tintin#{n}", 
+            web: rand(1..5),
+            crypto: rand(1..5),
+            reversing: rand(1..5),
+            pwn: rand(1..5),
+            misc: rand(1..5),
+            self_introduction: "send me DM freely!"
+        )
+        user.image.attach(
+            io: File.open(Rails.root.join("public/user#{rand(0..9)}.png")),
+            filename: 'default_user.png'
+        )
 # tournaments
-20.times do |n|
-    Tournament.create!(
-        name: SecureRandom.alphanumeric(rand(10..20)), 
-        date: Time.parse('2020-01-01 12:00:00')
-    )
-end
+# 20.times do |n|
+#     Tournament.create!(
+#         name: SecureRandom.alphanumeric(rand(10..20)), 
+#         date: Time.parse('2020-01-01 12:00:00')
+#     )
+# end
 
+Tournament.create!(
+    name: "Nara CTF", 
+    date: Time.parse('2020-01-01 12:00:00')
+)
+
+
+Tournament.create!(
+    name: "Deer CTF", 
+    date: Time.parse('2020-01-01 15:00:00')
+)
+
+
+Tournament.create!(
+    name: "Senbei CTF", 
+    date: Time.parse('2020-01-03 11:00:00')
+)
+
+Tournament.create!(
+    name: "World CTF", 
+    date: Time.parse('2020-01-02 10:00:00')
+)
+
+Tournament.create!(
+    name: "Beginner's CTF", 
+    date: Time.parse('2020-01-01 19:00:00')
+)
 # # participants
 # users = User.all.sample(20)
 # tournaments = Tournament.all.sample(20)
