@@ -64,7 +64,7 @@ height: 600pt;
     <div class="col-9">
     <strong class="d-block text-gray-dark mozi2"><%= link_to tournament.name ,"/tournaments/#{tournament.id}/", method: :get %></strong>
     <%dt=tournament.date%>
-    開催日
+    Date:
     <%= dt.strftime("%Y/%m/%d %H:%M:%S") %>
       </p></div>
       <div class="col-3">
@@ -74,9 +74,6 @@ height: 600pt;
     </div>
      <%end%>
  <%end %>
- <small class="d-block text-right mt-3">
-   <a href="#">All updates</a>
- </small>
 </div>
 </div>
 </div>
