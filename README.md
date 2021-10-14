@@ -23,6 +23,11 @@ CtFinderは、CTFのチーム作りのためのマッチングサイトです！
 
 ## 使い方
 1. [CtFinder](https://guarded-beach-79645.herokuapp.com/)にアクセス
-2. 右上のサインアップ画面で自身のプロフィールを入力
-![CtFinder](/images/SignUp.png)
-3. 
+2. 右上のボタンからサインアップ画面に移動し自身のプロフィールを入力
+![SignUp](/images/SignUp.png)
+3. ホーム画面からユーザー一覧のページに移動し、検索条件を入力
+![Users](/images/Users.png)
+4. 気に入ったユーザーのページに移動し、Like!ボタンを押す
+![TestUser](/images/TestUser.png)
+5. 相手がこちらをLike！していたらマッチング成立
+![](/images/TestUser.png)
