@@ -45,7 +45,16 @@
   </script>
 <% end %>
 
-<%# self-like flash message %>
+<%# like-success flash message %>
+<% if flash[:like_success] %>
+  <div class="container">
+    <p class="alert alert-success h4">
+      <%= flash[:like_success] %>
+    </p>
+  </div>
+<% end %>
+
+<%# like-failed flash message %>
 <% if flash[:danger] %>
   <div class="container">
     <p class="alert alert-danger h4">
@@ -69,7 +78,7 @@
         </div>
 
           <!--名前-->
-          <p class="text-center text-break"><font size="7">Name: <%= @user.name %></font></p>
+          <p class="text-center text-break"><font size="7"><%= @user.name %></font></p>
 
           <!--自己紹介-->
           <div >

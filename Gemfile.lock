@@ -132,6 +132,7 @@ GEM
     nio4r (2.5.8)
     nokogiri (1.12.5-x86_64-linux)
       racc (~> 1.4)
+    pg (1.2.3)
     popper_js (1.16.0)
     public_suffix (4.0.6)
     puma (4.3.8)
@@ -266,6 +267,7 @@ DEPENDENCIES
   kaminari
   kaminari-bootstrap
   listen (~> 3.2)
+  pg
   puma (~> 4.1)
   rails (~> 6.0.4, >= 6.0.4.1)
   rexml (~> 3.2, >= 3.2.4)

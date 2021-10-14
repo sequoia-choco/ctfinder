@@ -9,6 +9,7 @@ class LikesController < ApplicationController
         end
         like = Like.new(liker: current_user, liked: liked_user)
         if like.save
+            flash[:like_success] = "Likeしました！"
             unless Like.find_by(liker: liked_user, liked: current_user).nil?
                 Matching.create!(user1: current_user, user2: liked_user)
                 flash[:matching_success] = "マッチングしました！"

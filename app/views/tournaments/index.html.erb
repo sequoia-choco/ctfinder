@@ -28,7 +28,7 @@ height: 600pt;
  <div class="col-12 px-0">
  <div class="example4">
  <div class="my-3 p-3 bg-white rounded shadow-sm">
- <h1 class="border-bottom border-gray pb-2 mb-0">大会一覧</h1>
+ <h1 class="border-bottom border-gray pb-2 mb-0">Competitions</h1>
  <%if @ts_and_ps!=nil then%>
  <% @ts_and_ps.each do |ts_and_ps| %>
  <div class="media text-muted pt-3">
@@ -39,7 +39,7 @@ height: 600pt;
  <div class="col-9">
      <strong class="d-block text-gray-dark mozi2"><%= link_to ts_and_ps[:tournament].name ,"/tournaments/#{ts_and_ps[:tournament].id}/", method: :get %></strong>
      <%dt=ts_and_ps[:tournament].date%>
-     開催日
+     Date:
      <%= dt.strftime("%Y/%m/%d %H:%M:%S") %>
    </p></div>
    <div class="col-3">
@@ -64,7 +64,7 @@ height: 600pt;
     <div class="col-9">
     <strong class="d-block text-gray-dark mozi2"><%= link_to tournament.name ,"/tournaments/#{tournament.id}/", method: :get %></strong>
     <%dt=tournament.date%>
-    開催日
+    Date:
     <%= dt.strftime("%Y/%m/%d %H:%M:%S") %>
       </p></div>
       <div class="col-3">
@@ -74,9 +74,6 @@ height: 600pt;
     </div>
      <%end%>
  <%end %>
- <small class="d-block text-right mt-3">
-   <a href="#">All updates</a>
- </small>
 </div>
 </div>
 </div>

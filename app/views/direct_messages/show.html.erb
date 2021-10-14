@@ -5,7 +5,7 @@
     <style>
     .box {
         width: px;                /* 横幅を200pxに指定 */
-        height: 1000px;               /* 縦幅を200pxに指定 */     /* わかりやすくボーダーを引く */
+        height: 75vh;               /* 縦幅を200pxに指定 */     /* わかりやすくボーダーを引く */
         overflow-y: scroll;          /* 縦方向にスクロール可能にする */
     }
     </style>
@@ -34,39 +34,52 @@
             <div class="container-fluid box">
                 <div class="chat-message">
                     <ul class="chat">
-                        <% @dms.each do |dm| %>
-                            <% if params[:id].to_i == dm.sender_id %>
-                                <li class="left clearfix">
-                                    <span class="chat-img pull-left">
-                                        <% user_img_path = "/user" + (params[:id].to_i % 10).to_s + ".png" %>
-                                        <p class="trim-image-to-circle"><%= image_tag user_img_path, class: "d-block mx-auto" %></p>
-                                    </span>
-                                    <div class="chat-body clearfix">
-                                        <div class="header">
-                                            <strong class="primary-font"><%= @you.name %></strong>
-                                            <small class="pull-right text-muted"><i class="fa fa-clock-o"></i><%= dm.created_at %></small>
-                                        </div>
-                                        <p>
-                                            <%= dm.content %>
-                                        </p>
+                        <% if DirectMessage.find_by(matching_id: @matching.id).nil? %>
+                            <li class="right clearfix">
+                                <div class="chat-body clearfix">
+                                    <div class="header">
+                                        <strong class="primary-font"><%= "CtFinder" %></strong>
+                                        <small class="pull-right text-muted"><i class="fa fa-clock-o"></i></small>
                                     </div>
-                                </li>
-                            <% else %>
-                                <li class="right clearfix">
-                                    <span class="chat-img pull-right">
-                                        <p class="trim-image-to-circle"><%= image_tag @me.image, class: "d-block mx-auto" %></p>
-                                    </span>
-                                    <div class="chat-body clearfix">
-                                        <div class="header">
-                                            <strong class="primary-font"><%= @me.name %></strong>
-                                            <small class="pull-right text-muted"><i class="fa fa-clock-o"></i><%= dm.created_at %></small>
+                                    <p>
+                                        <%= "No message yet! Let's send a message!" %>
+                                    </p>
+                                </div>
+                            <li>
+                        <% else %>
+                            <% @dms.each do |dm| %>
+                                <% if params[:id].to_i == dm.sender_id %>
+                                    <li class="left clearfix">
+                                        <span class="chat-img pull-left">
+                                            <p class="trim-image-to-circle"><%= image_tag @you.image, class: "d-block mx-auto" %></p>
+                                        </span>
+                                        <div class="chat-body clearfix">
+                                            <div class="header">
+                                                <strong class="primary-font"><%= @you.name %></strong>
+                                                <small class="pull-right text-muted"><i class="fa fa-clock-o"></i><%= dm.created_at.strftime("%Y-%m-%d %H:%M") %></small>
+                                            </div>
+                                            <p>
+                                                <%= dm.content %>
+                                            </p>
                                         </div>
-                                        <p>
-                                            <%= dm.content %>
-                                        </p>
-                                    </div>
-                                </li>
-                            <% end %>                                            
+                                    </li>
+                                <% else %>
+                                    <li class="right clearfix">
+                                        <span class="chat-img pull-right">
+                                            <p class="trim-image-to-circle"><%= image_tag @me.image, class: "d-block mx-auto" %></p>
+                                        </span>
+                                        <div class="chat-body clearfix">
+                                            <div class="header">
+                                                <strong class="primary-font"><%= @me.name %></strong>
+                                                <small class="pull-right text-muted"><i class="fa fa-clock-o"></i><%= dm.created_at.strftime("%Y-%m-%d %H:%M") %></small>
+                                            </div>
+                                            <p>
+                                                <%= dm.content %>
+                                            </p>
+                                        </div>
+                                    </li>
+                                <% end %>                                            
+                            <% end %>
                         <% end %>
                     </ul>
                 </div>

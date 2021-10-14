@@ -38,6 +38,9 @@ white-space: nowrap;
     width:  100%;       /* ※縦横を同値に */
     height: 120px;       /* ※縦横を同値に */
 }
+.si{
+  height: 180px;
+}
     .item {
       /* 横スクロール用 */
       display: inline-block;
@@ -65,19 +68,12 @@ white-space: nowrap;
  <div class="row">
  <div class="col-4">
  <div class="container-fluid example2">
- <h6 class="border-bottom border-gray pb-2 mb-0">participants</h6>
+ <h2 class="border-bottom border-gray pb-2 mb-0">Participants</h2>
   <div class="row">
   <% @participants.each do |p| %>
     <div class="col-4">
-    <div class="card">
-    <p class="mozi3">
-    <%= p.name %>
-
-    <img src="https://placehold.jp/150x150.png" class="img1" alt="Card image cap">
-
-    <img src="https://placehold.jp/150x150.png" alt="Card image cap" class="aligncenter">
-
-    </p>
+    <div class="card si">
+    <p class="d-block text-gray-dark mozi3"><%= link_to p.name, user_path(p.user),:style=>"text-decoration:none;color:black;", data: {"turbolinks" => false} %></p>
     <% if p.user.image.attached? %>
             <%= image_tag p.user.image, class: "aligncenter" %>
           <% else %>
@@ -101,7 +97,7 @@ white-space: nowrap;
   <div class="col-8 px-0">
   <div class="example4">
   <div class="my-3 p-3 bg-white rounded shadow-sm">
-  <h6 class="border-bottom border-gray pb-2 mb-0">Recent updates</h6>
+  <h2 class="border-bottom border-gray pb-2 mb-0">Posts</h2>
   <% @posts.each do |post| %>
   <div class="media text-muted pt-3">
     <img2 data-src="holder.js/32x32?theme=thumb&bg=007bff&fg=007bff&size=1" alt="" class="mr-2 rounded percent">
@@ -111,9 +107,6 @@ white-space: nowrap;
     </p>
   </div>
   <%end %>
-  <small class="d-block text-right mt-3">
-    <a href="#">All updates</a>
-  </small>
 </div>
 
 </div>
